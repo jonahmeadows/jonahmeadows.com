@@ -1,0 +1,164 @@
+/* Modeled on alexlubben.com: single long page, minimal, editorial. */
+
+:root {
+  --text: #1a1a1a;
+  --muted: #666;
+  --link: #1a1a1a;
+  --rule: #e5e5e5;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  background: #fff;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 2.5rem;
+  line-height: 1.25;
+}
+
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.4rem;
+  margin: 2.75rem 0 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin: 1.75rem 0 0.5rem;
+}
+
+a { color: var(--link); }
+a:hover { color: #000; }
+
+section p { margin: 0.75rem 0; }
+
+.section-note {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: -0.5rem;
+}
+
+/* Featured story cards */
+.feature {
+  margin: 0 0 2.5rem;
+}
+
+.feature img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0.9rem;
+}
+
+.feature h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  margin: 0 0 0.25rem;
+  font-weight: 700;
+}
+
+.feature h3 a { text-decoration: none; }
+.feature h3 a:hover { text-decoration: underline; }
+
+.feature .outlet {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem;
+}
+
+.feature p.desc { margin: 0.5rem 0; }
+
+.feature.placeholder {
+  border: 1px dashed #ccc;
+  padding: 1.25rem;
+  color: var(--muted);
+}
+
+/* Latest articles list */
+#latest-articles article { margin-bottom: 1.5rem; }
+
+#latest-articles .thumb {
+  float: left;
+  width: 120px;
+  margin: 0.25rem 1rem 0.5rem 0;
+}
+
+#latest-articles .thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#latest-articles h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  margin: 0 0 0.2rem;
+  font-weight: 700;
+}
+
+#latest-articles h3 a { text-decoration: none; }
+#latest-articles h3 a:hover { text-decoration: underline; }
+
+#latest-articles .meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0 0 0.35rem;
+}
+
+#latest-articles p.desc {
+  margin: 0;
+  font-size: 0.95rem;
+  overflow: hidden;
+}
+
+#latest-articles::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Link lists */
+#more ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+#more li { margin: 0.4rem 0; }
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 560px) {
+  h1 { font-size: 1.6rem; }
+  #latest-articles .thumb {
+    float: none;
+    width: 100%;
+    margin: 0 0 0.6rem;
+  }
+}
