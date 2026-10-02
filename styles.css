@@ -173,10 +173,10 @@ footer {
   font-size: 0.9rem;
 }
 
+/* The two columns stay side-by-side at every screen size (no stacking). */
 @media (max-width: 900px) {
   .columns {
-    grid-template-columns: 1fr;
-    gap: 0;
+    gap: 1.25rem;
   }
 }
 
