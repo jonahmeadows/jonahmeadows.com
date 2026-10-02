@@ -20,9 +20,28 @@ body {
 }
 
 main {
-  max-width: 720px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 3rem 1.25rem 4rem;
+}
+
+/* Narrow container for the intro (header/about/contact) and the footer area.
+   The two-column layout below starts only after "Get in touch". */
+.narrow {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Two-column area: Selected work (left) + Latest articles (right) */
+.columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.columns h2 {
+  margin-top: 2.75rem;
 }
 
 h1 {
@@ -152,6 +171,13 @@ footer {
   border-top: 1px solid var(--rule);
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 }
 
 @media (max-width: 560px) {
