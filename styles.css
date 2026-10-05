@@ -32,10 +32,10 @@ main {
   margin: 0 auto;
 }
 
-/* Two-column area: Selected work (left) + Latest articles (right) */
+/* Two-column area: Selected work (left) + Latest articles (right), 50/50 */
 .columns {
   display: grid;
-  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 3rem;
   align-items: start;
 }
@@ -76,21 +76,40 @@ section p { margin: 0.75rem 0; }
   margin-top: -0.5rem;
 }
 
-/* Featured story cards */
+/* Profile photo in the About section. To change the photo later, edit the
+   img src in the #about section of index.html. */
+.profile-photo {
+  float: left;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0.25rem 1.25rem 0.75rem 0;
+}
+
+#about::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Featured story cards — kept compact so one card is roughly the height
+   of two Latest-articles items in the right column. */
 .feature {
-  margin: 0 0 2.5rem;
+  margin: 0 0 1.75rem;
 }
 
 .feature img {
   width: 100%;
-  height: auto;
+  height: 170px;
+  object-fit: cover;
   display: block;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.7rem;
 }
 
 .feature h3 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   font-style: italic;
   margin: 0 0 0.25rem;
   font-weight: 700;

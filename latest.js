@@ -26,13 +26,12 @@
         return;
       }
       container.innerHTML = items.map(function (it) {
+        // Right column shows headline + picture only (no date, no description).
         var img = it.image
           ? '<a class="thumb" href="' + esc(it.link) + '"><img src="' + esc(it.image) + '" alt="" loading="lazy"></a>'
           : '';
         return '<article>' + img +
           '<h3><a href="' + esc(it.link) + '">' + esc(it.title) + '</a></h3>' +
-          '<p class="meta">' + esc(shortDate(it.pubDate)) + '</p>' +
-          '<p class="desc">' + esc(it.description) + '</p>' +
           '</article>';
       }).join('');
     })
