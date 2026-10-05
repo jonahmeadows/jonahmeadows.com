@@ -8,7 +8,7 @@ rebuilt from the old Tumblr site's content. Static files, ready for GitHub Pages
 - `index.html` — single page: header, Get in touch, Selected work, Latest articles, More work
 - `styles.css` — minimal editorial styling
 - `latest.js` — renders the Latest articles section from `data/latest.json`
-- `data/latest.json` — latest 10 items from the nola.com author RSS feed (regenerated automatically)
+- `data/latest.json` — latest 50 items from the nola.com author RSS feed (regenerated automatically)
 - `scripts/fetch_rss.py` — fetches the RSS feed and rewrites `data/latest.json`
 - `.github/workflows/update-articles.yml` — runs `fetch_rss.py` every 6 hours and commits changes
 
