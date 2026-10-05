@@ -56,9 +56,11 @@
   // latest groups. (The button is hidden on desktop via CSS.)
   if (btn) {
     btn.addEventListener('click', function () {
+      // Toggle on both body and .columns so the button keeps working even
+      // if the stylesheet and script versions are briefly out of sync.
+      var expanded = document.body.classList.toggle('expanded');
       var cols = btn.closest('.columns');
-      if (!cols) return;
-      var expanded = cols.classList.toggle('expanded');
+      if (cols) cols.classList.toggle('expanded', expanded);
       btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
       btn.textContent = expanded ? 'Read less' : 'Read more';
     });
