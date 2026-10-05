@@ -282,8 +282,16 @@ footer {
     cursor: pointer;
   }
   #read-more:hover { border-color: #888; }
-  #selected { display: none; }
+  /* Everything below the Read more button stays hidden on phones
+     until the button is tapped. */
+  #selected,
+  #latest-rest,
+  #more,
+  footer { display: none; }
   #selected h2 { margin-top: 1rem; }
-  .columns.expanded #selected { display: block; }
+  body.expanded #selected,
+  body.expanded #latest-rest,
+  body.expanded #more,
+  body.expanded footer { display: block; }
   .continued-heading { display: block; }
 }
