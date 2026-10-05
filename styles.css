@@ -86,8 +86,9 @@ hr {
   margin: 2.25rem 0;
 }
 
-/* The <hr> above About me is the separator, so the h2 needs no top border */
-#about h2 {
+/* The <hr> above About me / Get in touch is the separator, so those h2s need no top border */
+#about h2,
+#contact h2 {
   border-top: none;
   padding-top: 0;
   margin-top: 0;
