@@ -13,9 +13,9 @@ import urllib.request
 from pathlib import Path
 
 FEED_URL = ("https://www.nola.com/search/?a=d1e3009c-f2ce-11ef-a083-13bafcd54a62"
-            "&s=start_time&sd=desc&f=rss")
+            "&s=start_time&sd=desc&f=rss&l=30")
 OUT = Path(__file__).resolve().parent.parent / "data" / "latest.json"
-MAX_ITEMS = 10
+MAX_ITEMS = 30
 
 
 def tag(block: str, name: str) -> str:
