@@ -132,48 +132,38 @@ section p { margin: 0.75rem 0; }
   color: var(--muted);
 }
 
-/* Latest articles list */
-#latest-articles article { margin-bottom: 1.5rem; }
+/* Latest articles list: uniform rows — fixed-size thumbnail + headline.
+   Every thumbnail is cropped to identical dimensions so rows align. */
+#latest-articles article {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
 
 #latest-articles .thumb {
-  float: left;
-  width: 120px;
-  margin: 0.25rem 1rem 0.5rem 0;
+  flex: 0 0 110px;
+  width: 110px;
+  margin: 0;
 }
 
 #latest-articles .thumb img {
   width: 100%;
-  height: auto;
+  height: 74px;
+  object-fit: cover;
   display: block;
 }
 
 #latest-articles h3 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.15rem;
-  margin: 0 0 0.2rem;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  margin: 0;
   font-weight: 700;
 }
 
 #latest-articles h3 a { text-decoration: none; }
 #latest-articles h3 a:hover { text-decoration: underline; }
-
-#latest-articles .meta {
-  color: var(--muted);
-  font-size: 0.85rem;
-  margin: 0 0 0.35rem;
-}
-
-#latest-articles p.desc {
-  margin: 0;
-  font-size: 0.95rem;
-  overflow: hidden;
-}
-
-#latest-articles::after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 /* Link lists */
 #more ul {
@@ -202,8 +192,10 @@ footer {
 @media (max-width: 560px) {
   h1 { font-size: 1.6rem; }
   #latest-articles .thumb {
-    float: none;
-    width: 100%;
-    margin: 0 0 0.6rem;
+    flex-basis: 64px;
+    width: 64px;
   }
+  #latest-articles .thumb img { height: 44px; }
+  #latest-articles h3 { font-size: 0.95rem; }
+  #latest-articles article { gap: 0.6rem; }
 }
